@@ -1,0 +1,13 @@
+﻿@model ProductListViewModel
+
+@foreach (var p in Model.Products)
+{
+    @await Html.PartialAsync("ProductSummary", p);
+}
+
+<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn btn-outline-secondary d-inline-flex align-items-center"
+     page-class-selected="btn btn-primary" page-url-category="@Model.CurrentCategory" class="d-flex gap-2 justify-content-center py-5">
+</div>
+
+

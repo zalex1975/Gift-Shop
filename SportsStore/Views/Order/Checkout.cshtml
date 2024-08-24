@@ -1,0 +1,37 @@
+﻿@model Order
+
+<h2>Ваш текущий заказ</h2>
+<p>Пожалуйста, заполните данные для отправки заказа</p>
+
+<form asp-action="Checkout" method="post">
+	<h3>Ваше имя</h3>
+    <div class="from-group">
+        <label>Имя:</label><br><input asp-for="Name" class="from-contol" />
+    </div>
+    <div class="from-group">
+        <label>Номер телефона:</label><br><input type="tel" asp-for="Phone" class="from-contol" />
+    </div>
+    <h3>Ваш адрес</h3>
+    <p>(улица, номер дома, квартира)</p>
+    <div class="from-group">
+        <label>Адрес:</label><br><input asp-for="Street" class="from-contol" />
+    </div>
+    <div class="from-group">
+        <label>Город:</label><br><input asp-for="City" class="from-contol" />
+    </div>
+    <div class="from-group">
+        <label>Индекс:</label><br><input asp-for="ZipCode" class="from-contol" />
+    </div>
+    
+    <h3>Дополнительно</h3>
+    <div class="checkbox">
+        <label>
+            <input asp-for="GiftWrap"/> Подарочная упаковка
+        </label>
+    </div>
+
+    <div class="text-center">
+        <input type="submit" class="btn btn-primary" value="Подтвердить заказ" />
+    </div>
+</form>
+ 
